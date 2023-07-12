@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+    <head>
+        <title>Insertion Sort</title>
+        <link rel="stylesheet" type="text/css" href="stylei.css" >
+    </head>
+    <body>
+        <navigation style="top: 0;">
+            <div class="topnav " >
+                <a href="#home" class="active " style="color: white;">Sorting Algorithm Visualizer</a>
+            <!-- Navigation links (hidden by default) -->
+            <div id="myLinks">
+              <a href="../Home.html">Home</a>
+              <a href="../Selection sort algorithm/selection.html">Selection sort</a>
+              <a href="../Selection Sort/index.html">Selection sort Visualizer</a>
+              <a href="insertion.html">Insertion sort</a>
+              <a href="../Insertion Sort/index.html">Insertion sort Visualizer</a>
+              <a href="../Bubble sort algorithm/Bubble_sort.html">Bubble sort</a>
+              <a href="../Bubble Sort/index.html"> Bubble sort Visualizer</a>
+            </div>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+          <script>
+        
+            function myFunction() {
+                var x = document.getElementById("myLinks");
+                if (x.style.display === "block") {
+                  x.style.display = "none";
+                } else {
+                  x.style.display = "block";
+                }
+              }
+            </script>
+            <script src="https://kit.fontawesome.com/d1c21128ed.js" crossorigin="anonymous"></script>
+            </navigation>
+
+        <header>
+            <h1> Insertion Sort</h1>
+        </header>
+        <main class="cover">
+        <article >
+        <div >
+            <h3>Description</h3>
+            <p>
+                Insertion Sort is a simple comparison based sorting algorithm that places an unsorted element at its suitable place in each iteration. Insertion sort works similarly as we sort cards in our hand in a card game.
+            <br>
+            <b>Reason Behind the Name Insertion Sort</b>
+            The algorithm divides the data structure in two sublists: a sorted one, and one still to sort. Initially, the sorted sublist is made up of just one element and it gets progressively filled. For every iteration, the algorithm picks an element on the unsorted sublist and inserts it at the right place in the sorted. Hence the name, insertion sort.
+            </p>
+            
+        </div>
+        <div>
+            <h3>Algorithm</h3>
+            <p>Now we have a bigger picture of how this sorting technique works, so we can derive simple steps by which we can achieve insertion sort.</p>
+            
+                Step 1: If it is the first element, it is already sorted.return1;<br>
+                Step 2: Pick next element<br>
+                Step 3: Compare with all elements in the sorted sub-list<br>
+                Step 4: Shift all the elements in the sorted sub-list that is greater than the value to be sorted<br>
+                
+                Step 5: Insert the value<br>
+                Step 6: Repeat until list is sorted
+            
+        </div>
+        <div class="menu-box">
+            <div style= "font-size: 35px;">IMPLEMENTATIONS</div>
+            <div id="menu-code" data-aos="fade-right" class="aos-init aos-animate">
+                <div class="menu-btns" id="menu-btns">
+                    <button class="menu-btns-activated">
+                    <img src="image/c_icon.png" width="32" height="32" title="C" alt="C"></button>
+                </div>
+                <div id="code-content">
+                    <pre>                    <code id="code" class="c hljs">
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">insertionSort</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arr[], <span class="hljs-keyword">int</span> n)</span>
+    </span>{
+        <span class="hljs-keyword">int</span> i, key, j;
+        <span class="hljs-keyword">for</span> (i = <span class="hljs-number">1</span>; i &lt; n; i++) {
+            key = arr[i];
+            j = i - <span class="hljs-number">1</span>;
+    
+            <span class="hljs-keyword">while</span> (j &gt;= <span class="hljs-number">0</span> &amp;&amp; arr[j] &gt; key) {
+                arr[j + <span class="hljs-number">1</span>] = arr[j];
+                j = j - <span class="hljs-number">1</span>;
+            }
+            arr[j + <span class="hljs-number">1</span>] = key;
+        }
+    }</code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+                <div>
+                <h3>Advantages:</h3>
+                <ol>
+                    <li>It can be easily computed.</li>
+                    <li>Best case complexity is of O(N) while the array is already sorted.</li>
+                    <li>Number of swaps reduced than bubble sort..</li>
+                    <li>For smaller values of N, insertion sort performs efficiently like other quadratic sorting algorithms.</li>
+                    <li>Stable sort.</li>
+                    <li>Adaptive: total number of steps is reduced for partially sorted array.</li>
+                    <li>In-Place sort.</li>
+                </ol>
+                <h3>Disadvantages: </h3>
+                <ol>
+                    <li>It is generally used when the value of N is small. For larger values of N, it is inefficient. </li>
+                </ol>
+                </div>
+            </article>
+            
+            <aside>
+                
+                <h3>Complexity</h3>
+                <table class="table" border="2">
+                    <tbody>
+                        <tr>
+                            <th>Best case</th>
+                            <td>
+                                O(n)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Average case</th>
+                        <td>
+                            O(n<sup>2</sup>)
+                        </td>
+                        </tr>
+                        <tr>
+                            <th>Worst case</th>
+                            <td>O(n<sup>2</sup>)</td>
+                        </tr>
+                        <tr>
+                            <th>Space complexity</th>
+                            <td>O(1)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </aside>
+        </main>
+
+    </body>
+</html>

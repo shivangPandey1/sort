@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- head -->
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	
+	<!-- title -->
+	<title>SelectionSort Visualizer</title>
+
+	<!-- linking style.css -->
+	<link href="style.css" rel="stylesheet" />
+</head>
+
+<!-- body -->
+<body >
+	<navigation style="top: 0;">
+		<div class="topnav " >
+			<a href="#home" class="active " style="color: white;">Sorting Algorithm Visualizer</a>
+		<!-- Navigation links (hidden by default) -->
+		<div id="myLinks">
+		  <a href="../Home.html">Home</a>
+		  <a href="../Selection sort algorithm/selection.html">Selection sort</a>
+		  <a href="index.html">Selection sort Visualizer</a>
+		  <a href="../Insertion sort algorithm/insertion.html">Insertion sort</a>
+		  <a href="../Insertion Sort/index.html">Insertion sort Visualizer</a>
+		  <a href="../Bubble sort algorithm/Bubble_sort.html">Bubble sort</a>
+		  <a href="../Bubble Sort/index.html"> Bubble sort Visualizer</a>
+		</div>
+		<!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+		  <i class="fa fa-bars"></i>
+		</a>
+	  </div>
+	  <script>
+	
+		function myFunction() {
+			var x = document.getElementById("myLinks");
+			if (x.style.display === "block") {
+			  x.style.display = "none";
+			} else {
+			  x.style.display = "block";
+			}
+		  }
+		</script>
+		<script src="https://kit.fontawesome.com/d1c21128ed.js" crossorigin="anonymous"></script>
+		</navigation>
+<section class="head">Selection Sort Visualizer</section>
+<section class="data-container"></section>
+	
+<!-- "Generate New Array" button -->
+<button class="btn1" onclick="generate()" id="Button1" >
+	Generate New Array</button>
+	
+<!-- "Selection Sort" button -->
+<button class="btn2"
+		onclick="SelectionSort(),disable()" id="Button2" >
+	Selection Sort</button>
+</body>
+
+<!-- linking index.js -->
+<script src="index.js"></script>
+</html>

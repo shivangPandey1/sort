@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bubble Sort</title>
+        <link rel="stylesheet" type="text/css" href="styleb.css" >
+    </head>
+    <body>
+        <navigation style="top: 0;">
+        <div class="topnav " >
+            <a href="#home" class="active " style="color: white;">Sorting Algorithm Visualizer</a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+          <a href="../Home.html">Home</a>
+          <a href="../Selection sort algorithm/selection.html">Selection sort</a>
+          <a href="../Selection Sort/index.html">Selection sort Visualizer</a>
+          <a href="../Insertion sort algorithm/insertion.html">Insertion sort</a>
+          <a href="../Insertion Sort/index.html">Insertion sort Visualizer</a>
+          <a href="Bubble_sort.html">Bubble sort</a>
+          <a href="../Bubble Sort/index.html"> Bubble sort Visualizer</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <script>
+    
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+              x.style.display = "none";
+            } else {
+              x.style.display = "block";
+            }
+          }
+        </script>
+        <script src="https://kit.fontawesome.com/d1c21128ed.js" crossorigin="anonymous"></script>
+        </navigation>
+
+        <header>
+            <h1> Bubble Sort</h1>
+        </header>
+        <main class="cover">
+        <article >
+        <div >
+            <h3>Description</h3>
+            <p>
+            Bubble sort is a simple sorting algorithm. This sorting algorithm is comparison-based algorithm in which in each cycle  each pair of adjacent elements is compared and the elements are swapped if they are not in order.
+            <br>
+            <b>Reason Behind the Name Bubble Sort</b>
+            Because the effect is just like dropping of stone which leads to sparkling bubble at top 
+            Here Bubble represent the elements of data structure .  
+            The bigger bubbles reach the top faster than smaller bubbles.
+            </p>
+            
+        </div>
+        <div>
+            <h3>Algorithm</h3>
+            <p>We assume list is an array of n elements. We further assume that swap function swaps the values of the given array elements.</p>
+            
+                begin BubbleSort(list)<br>
+
+               for all elements of list<br>
+               if list[i] > list[i+1]<br>
+               swap(list[i], list[i+1])<br>
+               end if<br>
+               end for<br>
+               return list<br>
+               end BubbleSort<br>
+        </div>
+        <div class="menu-box">
+            <div style= "font-size: 35px;">IMPLEMENTATIONS</div>
+            <div id="menu-code" data-aos="fade-right" class="aos-init aos-animate">
+                <div class="menu-btns" id="menu-btns">
+                    <button class="menu-btns-activated">
+                    <img src="image/c_icon.png" width="32" height="32" title="C" alt="C"></button>
+                </div>
+                <div id="code-content">
+                    <pre>    <code id="code" class="c hljs">
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">bubble_sort</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arr[], <span class="hljs-keyword">int</span> n)</span> </span>{
+    <span class="hljs-keyword">int</span> c, d, t;
+        
+    <span class="hljs-keyword">for</span> (c = <span class="hljs-number">0</span> ; c &lt; n - <span class="hljs-number">1</span>; c++) {
+    <span class="hljs-keyword">for</span> (d = <span class="hljs-number">0</span> ; d &lt; n - c - <span class="hljs-number">1</span>; d++) {
+    <span class="hljs-keyword">if</span> (arr[d] &gt; arr[d+<span class="hljs-number">1</span>]) {
+            t = arr[d];
+            arr[d] = arr[d+<span class="hljs-number">1</span>];
+            arr[d+<span class="hljs-number">1</span>] = t;
+          }
+        }
+        }
+        }</code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+                <div>
+                <h3>Advantages:</h3>
+                <ol>
+                    <li>It is the simplest sorting approach.</li>
+                    <li>Best case complexity is of O(N) [for optimized approach] while the array is sorted.</li>
+                    <li>Using optimized approach, it can detect already sorted array in first pass with time complexity of O(N).</li>
+                    <li>Stable sort: does not change the relative order of elements with equal keys.</li>
+                    <li>In-Place sort.</li>
+                </ol>
+                <h3>Disadvantages: </h3>
+                <ol>
+                    <li>Bubble sort is comparatively slower algorithm.</li>
+                </ol>
+                </div>
+            </article>
+            
+            <aside>
+                
+                <h3>Complexity</h3>
+                <table class="table" border="2">
+                    <tbody>
+                        <tr>
+                            <th>Best case</th>
+                            <td>
+                                O(n)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Average case</th>
+                        <td>
+                            O(n<sup>2</sup>)
+                        </td>
+                        </tr>
+                        <tr>
+                            <th>Worst case</th>
+                            <td>O(n<sup>2</sup>)</td>
+                        </tr>
+                        <tr>
+                            <th>Space complexity</th>
+                            <td>O(1)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </aside>
+        </main>
+
+    </body>
+</html>

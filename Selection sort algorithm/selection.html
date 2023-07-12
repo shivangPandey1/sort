@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+    <head>
+        <title>Selection Sort</title>
+        <link rel="stylesheet" type="text/css" href="styles.css" >
+    </head>
+    <body>
+        <navigation style="top: 0;">
+            <div class="topnav " >
+                <a href="#home" class="active " style="color: white;">Sorting Algorithm Visualizer</a>
+            <!-- Navigation links (hidden by default) -->
+            <div id="myLinks">
+              <a href="../Home.html">Home</a>
+              <a href="selection.html">Selection sort</a>
+              <a href="../Selection Sort/index.html">Selection sort Visualizer</a>
+              <a href="../Insertion sort algorithm/insertion.html">Insertion sort</a>
+              <a href="../Insertion Sort/index.html">Insertion sort Visualizer</a>
+              <a href="../Bubble sort algorithm/Bubble_sort.html">Bubble sort</a>
+              <a href="../Bubble Sort/index.html"> Bubble sort Visualizer</a>
+            </div>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+          <script>
+        
+            function myFunction() {
+                var x = document.getElementById("myLinks");
+                if (x.style.display === "block") {
+                  x.style.display = "none";
+                } else {
+                  x.style.display = "block";
+                }
+              }
+            </script>
+            <script src="https://kit.fontawesome.com/d1c21128ed.js" crossorigin="anonymous"></script>
+            </navigation>
+        <header>
+            <h1> Selection Sort</h1>
+        </header>
+        <main class="cover">
+        <article >
+        <div >
+            <h3>Description</h3>
+            <p>
+                Selection sort is a simple sorting algorithm. This sorting algorithm is an in-place comparison-based algorithm in which the list is divided into two parts, the sorted part at the left end and the unsorted part at the right end. Initially, the sorted part is empty and the unsorted part is the entire list.
+
+                The smallest element is selected from the unsorted array and swapped with the leftmost element, and that element becomes a part of the sorted array. This process continues moving unsorted array boundary by one element to the right.<br>
+                It's a really simple and intuitive algorithm that does not require additional memory, but it's not really efficient on big data structures due to its quadratic time complexity. This algorithm has been upgraded and enhanced in several variants such as Heap Sort.
+            
+            </p>
+            
+        </div>
+        <div>
+            <h3>Algorithm</h3>
+            <p>Now we have a bigger picture of how this sorting technique works, so we can derive simple steps by which we can achieve insertion sort.</p>
+            
+            Step 1: Set MIN to location 0. <br>
+            Step 2: Search the minimum element in the list<br>
+            Step 3: Swap with value at location MIN<br>
+            Step 4: Increment MIN to point to next element<br>
+            Step 5: Repeat until list is sorted<br>
+            
+        </div>
+        <div class="menu-box">
+            <div style= "font-size: 35px;">IMPLEMENTATIONS</div>
+            <div id="menu-code" data-aos="fade-right" class="aos-init aos-animate">
+                <div class="menu-btns" id="menu-btns">
+                    <button class="menu-btns-activated">
+                    <img src="image/c_icon.png" width="32" height="32" title="C" alt="C"></button>
+                </div>
+                <div id="code-content">
+                    <pre>                    <code id="code" class="c hljs">
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">swap</span><span class="hljs-params">(<span class="hljs-keyword">int</span> *xp, <span class="hljs-keyword">int</span> *yp)</span>
+    </span>{
+        <span class="hljs-keyword">int</span> temp = *xp;
+        *xp = *yp;
+        *yp = temp;
+    }
+    
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">selectionSort</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arr[], <span class="hljs-keyword">int</span> n)</span>
+    </span>{
+        <span class="hljs-keyword">int</span> i, j, min_idx;
+    
+        <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; n<span class="hljs-number">-1</span>; i++)
+        {
+            min_idx = i;
+            <span class="hljs-keyword">for</span> (j = i+<span class="hljs-number">1</span>; j &lt; n; j++)
+              <span class="hljs-keyword">if</span> (arr[j] &lt; arr[min_idx])
+                min_idx = j;
+    
+            swap(&amp;arr[min_idx], &amp;arr[i]);
+        }
+    }</code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    
+       
+                <div>
+                <h3>Advantages:</h3>
+                <ol>
+                    <li>It can also be used on list structures that make add and remove efficient, such as a linked list. Just remove the smallest element of unsorted part and end at the end of sorted part.</li>
+                    <li>The number of swaps reduced. O(N) swaps in all cases.</li>
+                    <li>In-Place sort.</li>
+                </ol>
+                <h3>Disadvantages: </h3>
+                <ol>
+                    <li>Time complexity in all cases is O(N2), no best case scenario. </li>
+                </ol>
+                </div>
+            </article>
+            
+            <aside>
+                
+                <h3>Complexity</h3>
+                <table class="table" border="2">
+                    <tbody>
+                        <tr>
+                            <th>Best case</th>
+                            <td>O(n<sup>2</sup>)</td>
+                        </tr>
+                        <tr>
+                            <th>Average case</th>
+                        <td>
+                            O(n<sup>2</sup>)
+                        </td>
+                        </tr>
+                        <tr>
+                            <th>Worst case</th>
+                            <td>O(n<sup>2</sup>)</td>
+                        </tr>
+                        <tr>
+                            <th>Space complexity</th>
+                            <td>O(1)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </aside>
+            
+        </main>
+
+    </body>
+</html>

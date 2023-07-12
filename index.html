@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Sorting Algorithm Visualizer </title>
+        <link rel="stylesheet" type="text/css" href="style.css" >
+    </head>
+
+    <body>
+      
+        <navigation style="top: 0;">
+            <div class="topnav " >
+                <a href="#home" class="active " style="color: white;">Sorting Algorithm Visualizer</a>
+            <!-- Navigation links (hidden by default) -->
+            <div id="myLinks">
+              <a href="Home.html">Home</a>
+              <a href="Selection sort algorithm/selection.html">Selection sort</a>
+              <a href="Selection Sort/index.html">Selection sort Visualizer</a>
+              <a href="Insertion sort algorithm/insertion.html">Insertion sort</a>
+              <a href="Insertion Sort/index.html">Insertion sort Visualizer</a>
+              <a href="Bubble sort algorithm/Bubble_sort.html">Bubble sort</a>
+              <a href="Bubble Sort/index.html"> Bubble sort Visualizer</a>
+            </div>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+          <script>
+        
+            function myFunction() {
+                var x = document.getElementById("myLinks");
+                if (x.style.display === "block") {
+                  x.style.display = "none";
+                } else {
+                  x.style.display = "block";
+                }
+              }
+            </script>
+            <script src="https://kit.fontawesome.com/d1c21128ed.js" crossorigin="anonymous"></script>
+            </navigation>
+
+           <header>
+             <h1> Sorting Algorithm </h1>
+             <h1>Visualizer</h1>
+             
+           </header>
+
+           <div class= "cover">
+           <article>
+               <h2>Sorting Algorithm</h2>
+               <p>
+                Sorting refers to arranging data in a particular format. Sorting algorithm specifies the way to arrange data in a particular order. Most common orders are in numerical or lexicographical order.   
+               </p>
+               <p>
+                This operation is one of the most important and widespread in computer science. For a long time, new methods have been developed to make this procedure faster and faster.
+                The importance of sorting lies in the fact that data searching can be optimized to a very high level, if data is stored in a sorted manner. Sorting is also used to represent data in more readable formats.
+               </p>
+               
+               <h2>Types of Sorting </h2>
+               <p>
+                There are various Sorting Techniques like Bubble sort , Insertion Sort ,Selection Sort , Heap Sort, Merge Sort, Quick Sort, tree sort , shell sort , count sort, bucket and radix sort . each of these sorting techniques has its own characterisctics.
+                We use some Criteria for Comparing these Sorting Techniques and  decide best one according to work requirement.
+               </p>  
+               <h2>Criteria for comparison</h2>
+               <p>
+                   <ol>
+                       <li>
+                           <h4>Time Complexity </h4>
+                           <p>
+                            Time complexity of algorithm decide how much time it take to sort a particular data. Time complexity of sorting Algorithm mainly depend on number of comparison.   
+                           </p>
+                       </li>
+                       <li>
+                        <h4>Space Complexity</h4>
+                        <p>
+                            The space complexity of an algorithm  is the amount of memory space required to sort particular data or any other computational problem.  
+                        </p>
+                       </li>
+                       <p>
+                        Most of them fall into three categories:   
+                    </p>
+                    <ul type = "circle">
+                        <li>
+                            <h5>
+                                Logarithmic   
+                            </h5>
+                            <p>
+                                The complexity is proportional to the binary logarithm (i.e to the base 2) of n.
+                                An example of a logarithmic sorting algorithm is Quick sort, with space and time complexity O(n × log n).   
+                            </p>
+                        </li>
+                        <li>
+                             <h5> Quadratic</h5>
+                             <p>
+                                The complexity is proportional to the square of n.
+                                An example of a quadratic sorting algorithm is Bubble sort, with a time complexity of O(n2).    
+                             </p>
+                        </li>
+                        <li>
+                            <h5>Linear </h5>
+                            <p>
+                                The complexity is propotional to n.
+                                An example of a linear sorting algorithm is count sort, radix sort, bin sort.
+                            </p>
+                        </li>
+                    </ul>
+                <li>
+                    <h4>
+                        In-place Sorting and Not-in-place Sorting
+                    </h4>
+                    <p>
+                        It clears that whether Sorting algorithm require any extra space of memory for comparison  and storing data elements.
+                        These algorithms do not require any extra space and sorting is said to happen in-place,
+                        If it requires space which is more than or equal to the elements being sorted then this sorting is not inplace type .    
+                    </p>
+                </li>
+               <li>
+                   <h4>
+                    Adaptive and Non-Adaptive Sorting Algorithm  
+                   </h4>
+                   <p>
+                    A sorting algorithm is said to be adaptive, if it takes advantage of already 'sorted' elements in the list that is to be sorted.    
+                   </p>
+               </li>
+                          
+               </p>
+               </ol>
+               <p>
+                Sorting algorithms can be difficult to understand and it's easy to get confused. We believe visualizing sorting algorithms can be a great way to better understand their functioning while having fun!   
+               </p>
+               <button id="sort-btn" class="ripple-sort-btn open" onclick="myFunction()" >SORTS</button>
+           </article>
+       </div>
+       <div class= "cover">
+       <footer>
+           <table>
+               <tr>
+                   <th>
+                        Sorting Algorithm Visualizer 
+                   </th>
+                </tr>   
+                
+                <tr> 
+                    <td>Shivang Pandey</td>
+                </tr>
+           </table>
+        </footer>
+        </div>
+    
+        
+    </body>
+</html>

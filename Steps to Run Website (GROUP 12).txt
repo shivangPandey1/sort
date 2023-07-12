@@ -1,0 +1,36 @@
+GROUP - 12
+TOPIC - SORTING ALGORITHM VISUALIZER
+
+Zip file name -> Mini Project 
+      FOLDER NAME -> Mini Pro 
+      Mini Pro folder contain f0llowing folders and file -
+         folders- Bubble sort , Bubble sort algorithm , insertion sort, insertion sort algorithm,selection sort , selection sort algorithm, home page, images
+         (each folder contain html, css and java script file of each page and image folder contain images used in website)
+         files - home.html and style.css
+
+Steps to Run Website-
+Step 1 - fist unzip file (fist select zip file then left click on mouse then click on extract all)
+  ** Berfor going to next step make sure zip file must be unzip 
+Step 2-  then open mini pro folder , then click on home.html file which open on any browser (this step open home page of website)
+step 3 - From home page of website , another page of website is easyly open by navigation menu
+
+ Another method to run this website -
+ ( follow this method only when if from above 3 steps whole website is unable to open )
+**if from home page another page of website not able to open if it shows any type of error
+step 1- Download vs code ( an open source software)
+Step 2- click on file button in VS code , open folder mini pro in vs code 
+stpe 3- Click on any open file (.html or .css) clicking it to see code.
+step 4 - To run code, right click on mouse select open with live server, file will run in browser 
+                                     OR
+
+	            Download an extension, LIVE SERVER and select it to run direct (.html) file.
+			
+				*internet is required for proper running of website as it is embedded with source links"
+
+
+
+
+
+
+      
+           

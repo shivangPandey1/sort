@@ -1,0 +1,107 @@
+body
+{
+    background-image: url("image/istockphoto-1037573870-170667a.jpg");
+    background-position: left;
+    background-position-x: left;
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: azure;
+    font-size: 25px;
+    text-align: justify;
+    align-items: center;
+}
+.cover{
+    background: linear-gradient( 
+        0deg
+         , rgb(37 80 112) 0%, rgb(11 28 46) 70%);
+}
+header
+{
+    color:white;
+    margin-top: 20vh;
+    margin-left: 30%;
+    margin-bottom: 20vh;
+    font-size: 3vw;
+    font-weight: bold;
+    line-height: 40px;
+
+}
+article{
+    width: 60%;
+    display: inline-block;
+    margin-left: 5%;
+}
+aside{
+    margin-left: 150px;
+    display: inline-block;
+    width: 21%;
+    vertical-align: top;
+
+}
+.menu-box
+{
+    margin-top: 80px;
+    margin-bottom: 50px;
+    color: white;
+}
+.menu-btns {
+    width: 100%;
+}
+#menu-code{
+    font-size: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    position: relative;
+    background-color: rgb(22, 22, 22);
+    min-width: 50%;
+    display: inline-block;
+    border: 2px solid #07c6f6;
+    min-height: 70vh;
+}
+topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    z-index: 10; 
+  }
+  
+  .topnav #myLinks {
+    display: none;
+    background-color:  #153653;
+    
+    /*opacity: 0.5;*/
+    position: fixed;
+    z-index: 10;
+  
+  }
+  
+  .topnav a {
+    
+    color: #ffffff;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  
+  }
+  
+  .topnav a.icon {
+    background: #153653;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 8px;
+  }
+  .topnav a:hover {
+    
+    background-color: #ddd;
+    color: black;
+    opacity: 0.8;
+  }
+  .active {
+    background-color: #153653;
+    
+    margin-left: 2rem;
+  }
